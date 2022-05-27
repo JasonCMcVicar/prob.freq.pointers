@@ -11,11 +11,12 @@ function canConstructWord(word, letters) {
   const lettersToCount = {};
 
   for (let letter of letters) {
-    if (letter in lettersToCount) {
-      lettersToCount[letter]++;
-    } else {
-      lettersToCount[letter] = 1;
-    }
+    // if (letter in lettersToCount) {
+    //   lettersToCount[letter]++;
+    // } else {
+    //   lettersToCount[letter] = 1;
+    // }
+    lettersToCount[letter] = (lettersToCount[letter] || 0) + 1;
   }
   console.log(lettersToCount);
 
