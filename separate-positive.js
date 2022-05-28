@@ -13,8 +13,9 @@ function separatePositive(nums) {
     } else if (nums[end] < 0) {
       end--;
     } else {
-      [nums[begin], nums[end]] = [nums[end], nums[begin]];
-      //[nums[left], nums[right]] = [nums[right], nums[left]];
+      //either way works here...
+      //[nums[begin], nums[end]] = [nums[end], nums[begin]];
+      [nums[end], nums[begin]] = [nums[begin], nums[end]];
     }
   }
   return nums;
